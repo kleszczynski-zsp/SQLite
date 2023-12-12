@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+      
+        <ComboBox Name="cbx" HorizontalAlignment="Left" Margin="231,163,0,0" VerticalAlignment="Top" Width="120">
+            
+        </ComboBox>
+        <TextBox x:Name="tbx" HorizontalAlignment="Left" Margin="223,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="246,231,0,0" VerticalAlignment="Top" Click="Button_Click"/>
 
     </Grid>
 </Window>

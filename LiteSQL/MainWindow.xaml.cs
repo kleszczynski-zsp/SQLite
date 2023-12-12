@@ -27,40 +27,45 @@ namespace LiteSQL
         {
             InitializeComponent();
             using var context = new LiteSQLContext();
+           
 
-            //context.Brands.Add(new Brand
-            //{
-            //    BrandName = "Audi",
-            //    YearOfEstablishment = 2137
-            //});
+           //var x = context.Brands.Add(new Brand
+           // {
+           //     BrandName = "Audi",
+           //     YearOfEstablishment = 2137
+           // });
 
-            //context.Brands.Add(new Brand
-            //{
-            //    BrandName = "VW",
-            //    YearOfEstablishment = 2137
-            //});
+           // context.SaveChanges();
+            
+           // context.Add(new Model
+           // {
+           //     ModelName = "A8",
+           //     YearOfStartProduction = "2137",
+           //     BrandId = x.Entity.BrandId,
+           // });
 
-            context.Add(new Model
-            {
-                ModelName = "Lupo",
-                YearOfStartProduction = 1850,
-                BrandId = 3,
-
-            });
-
-            context.SaveChanges();
-            foreach (var item in context.Models.Include(x => x.Brand))
+           // context.SaveChanges();
+            foreach (var item in context.Models.Include(x => x.Brand).Where(x=>x.BrandId==1))
             {
                 var x = item.Brand.BrandName + " " + item.ModelName;
+                cbx.Items.Add(x);
             }
 
-            foreach (var brands in context.Brands.Include(x => x.Models))
-            {
-                foreach (var model in brands.Models)
-                {
-                    var x = brands.BrandName + " " + model.ModelName;
-                }
-            }
+            //foreach (var brands in context.Brands.Include(x => x.Models))
+            //{
+            //    foreach (var model in brands.Models)
+            //    {
+            //        var x = brands.BrandName + " " + model.ModelName;
+            //    }
+            //}
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+            
+            var x =  cbx.SelectedItem + tbx.Text;
+
         }
     }
 }

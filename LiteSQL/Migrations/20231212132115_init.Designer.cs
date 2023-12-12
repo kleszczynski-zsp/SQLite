@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LiteSQL.Migrations
 {
     [DbContext(typeof(LiteSQLContext))]
-    [Migration("20231212101442_init")]
+    [Migration("20231212132115_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LiteSQL.Migrations
 {
     [DbContext(typeof(LiteSQLContext))]
-    [Migration("20231212101835_changestringtoint")]
+    [Migration("20231212133417_changestringtoint")]
     partial class changestringtoint
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
